@@ -2,7 +2,9 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 import pandas as pd
-from project.inference import predict_next_24_hours
+import os
+import uvicorn
+from inference import predict_next_24_hours
 
 app = FastAPI(title='Energy Load Forecast API')
 
@@ -33,3 +35,8 @@ def predict(data: HistoryInput):
     return {
         "forecast_next_24_hours": forecast
     }
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("app:app", host="0.0.0.0", port=port)
