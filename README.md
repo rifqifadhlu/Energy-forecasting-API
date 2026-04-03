@@ -1,5 +1,5 @@
 # Energy Load Forecasting API (XGBoost + FastAPI)
-![CI](https://github.com/username/repo/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/rifqifadhlu/repo/actions/workflows/ci.yml/badge.svg)
 ## Overview
 This project implements a production-ready machine learning inference service for short-term energy load forecasting.
 The system predicts the next 24 hours of electricity load using an optimized XGBoost regression model and exposes the prediction via a REST API built with FastAPI.
