@@ -8,7 +8,7 @@ def test_health_check():
     assert response.status_code == 200
 
 def test_prediction_endpoint():
-sample_input = {
+    sample_input = {
         "features": [1, 4, 10, 282, 1556, 1984, 1857, 1670.895, 241.555]
     }
     response = client.post("/predict", json=sample_input)
