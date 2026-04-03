@@ -7,6 +7,6 @@ def test_model_load():
 
 def test_model_prediction_shape():
     model = joblib.load("forecast_model.pkl")
-    sample = np.random.rand(1, 5)
+    sample = np.random.rand(1, 9)
     prediction = model.predict(sample)
     assert prediction.shape[0] == 1
